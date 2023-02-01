@@ -1,2 +1,2 @@
-require('hawk.remap')
 require('hawk.set')
+require('hawk.remap')
