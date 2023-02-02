@@ -47,9 +47,9 @@ return require('packer').startup(function(use)
 
                 -- Callback function to define custom color groups
                 -- See 'lua/nordic/colors/example.lua' for example defitions
-                custom_colors = function(c, s, cs)
+                --[[ custom_colors = function(c, s, cs)
                     return {}
-                end
+                end ]]
             })
         end
     }
@@ -90,14 +90,15 @@ return require('packer').startup(function(use)
         }
     }
 
+    use('ellisonleao/glow.nvim')
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
-    use 'lukas-reineke/indent-blankline.nvim'
+    use('numToStr/FTerm.nvim')
+    use('lukas-reineke/indent-blankline.nvim')
     -- prettier netrw
     -- use { 'prichrd/netrw.nvim' }
-    --
     -- sourcegraph
     --[[ use {
         'tjdevries/sg.nvim',
