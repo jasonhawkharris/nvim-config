@@ -1,10 +1,10 @@
 require('FTerm').setup({
-    border = 'double',
+    border = 'solid',
     dimensions  = {
-        height = 0.9,
-        width = 0.9,
+        height = 0.7,
+        width = 0.7,
     },
 })
 
---[[ vim.keymap.set('n', '<C-i>', '<CMD>lua require("FTerm").toggle()<CR>')
-vim.keymap.set('t', '<C-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>') ]]
+vim.keymap.set('n', '<C-i>', '<CMD>lua require("FTerm").toggle()<CR>')
+vim.keymap.set('t', '<C-i>', '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>')

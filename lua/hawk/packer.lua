@@ -7,10 +7,9 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'ThePrimeagen/vim-be-good'
     use 'b3nj5m1n/kommentary'
-    use { 'ojroques/nvim-hardline' }
+    use 'ojroques/nvim-hardline'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
@@ -18,8 +17,17 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
     use 'tpope/vim-fugitive'
 
+    use {
+        'sudormrfbin/cheatsheet.nvim',
+
+        requires = {
+            { 'nvim-telescope/telescope.nvim' },
+            { 'nvim-lua/popup.nvim' },
+            { 'nvim-lua/plenary.nvim' },
+        }
+    }
     use { "shortcuts/no-neck-pain.nvim", tag = "*" }
-    use { 'm4xshen/autoclose.nvim' }
+    use 'm4xshen/autoclose.nvim'
     use {
         'andersevenrud/nordic.nvim',
         config = function()
@@ -85,18 +93,17 @@ return require('packer').startup(function(use)
 
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
-            -- Snippet Collection (Optional)
             { 'rafamadriz/friendly-snippets' },
         }
     }
 
-    use('ellisonleao/glow.nvim')
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-    use('nvim-treesitter/playground')
-    use('theprimeagen/harpoon')
-    use('mbbill/undotree')
-    use('numToStr/FTerm.nvim')
-    use('lukas-reineke/indent-blankline.nvim')
+    use 'ellisonleao/glow.nvim'
+    use 'nvim-treesitter/playground'
+    use 'theprimeagen/harpoon'
+    use 'mbbill/undotree'
+    use 'numToStr/FTerm.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
     -- prettier netrw
     -- use { 'prichrd/netrw.nvim' }
     -- sourcegraph
