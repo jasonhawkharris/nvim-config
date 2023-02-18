@@ -1,4 +1,4 @@
--- Explore
+-- Explore when not using nvim-tree.nvim
 -- vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- Move shit around all nice
