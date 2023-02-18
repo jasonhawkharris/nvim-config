@@ -74,11 +74,6 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["FTerm.nvim"] = {
-    loaded = true,
-    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
-    url = "https://github.com/numToStr/FTerm.nvim"
-  },
   LuaSnip = {
     loaded = true,
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -93,6 +88,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/autoclose.nvim",
     url = "https://github.com/m4xshen/autoclose.nvim"
+  },
+  ["better-escape.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0" },
+    loaded = true,
+    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
+    url = "https://github.com/max397574/better-escape.nvim"
   },
   ["cheatsheet.nvim"] = {
     loaded = true,
@@ -174,13 +175,8 @@ _G.packer_plugins = {
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/middleclass",
     url = "https://github.com/anuvyklack/middleclass"
   },
-  ["no-neck-pain.nvim"] = {
-    loaded = true,
-    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/no-neck-pain.nvim",
-    url = "https://github.com/shortcuts/no-neck-pain.nvim"
-  },
   ["nordic.nvim"] = {
-    config = { "\27LJ\2\n表1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\17minimal_mode\1\vitalic\2\21underline_option\tnone\26alternate_backgrounds\1\20italic_comments\1\16colorscheme\vnordic\frequire\0" },
+    config = { "\27LJ\2\n表1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\vitalic\2\17minimal_mode\1\20italic_comments\1\26alternate_backgrounds\1\21underline_option\tnone\16colorscheme\vnordic\frequire\0" },
     loaded = true,
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/nordic.nvim",
     url = "https://github.com/andersevenrud/nordic.nvim"
@@ -200,10 +196,20 @@ _G.packer_plugins = {
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -224,6 +230,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["reticle.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\freticle\frequire\0" },
+    loaded = true,
+    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/reticle.nvim",
+    url = "https://github.com/tummetott/reticle.nvim"
+  },
+  ["sg.nvim"] = {
+    loaded = true,
+    path = "/Users/sourcegraph/.local/share/nvim/site/pack/packer/start/sg.nvim",
+    url = "https://github.com/tjdevries/sg.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -258,9 +275,17 @@ time([[Defining packer_plugins]], false)
 time([[Config for windows.nvim]], true)
 try_loadstring("\27LJ\2\n圭1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\n\0=\1\2\0006\0\0\0009\0\1\0)\1\n\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
 time([[Config for windows.nvim]], false)
+-- Config for: reticle.nvim
+time([[Config for reticle.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\freticle\frequire\0", "config", "reticle.nvim")
+time([[Config for reticle.nvim]], false)
+-- Config for: better-escape.nvim
+time([[Config for better-escape.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
+time([[Config for better-escape.nvim]], false)
 -- Config for: nordic.nvim
 time([[Config for nordic.nvim]], true)
-try_loadstring("\27LJ\2\n表1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\17minimal_mode\1\vitalic\2\21underline_option\tnone\26alternate_backgrounds\1\20italic_comments\1\16colorscheme\vnordic\frequire\0", "config", "nordic.nvim")
+try_loadstring("\27LJ\2\n表1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\5\vitalic\2\17minimal_mode\1\20italic_comments\1\26alternate_backgrounds\1\21underline_option\tnone\16colorscheme\vnordic\frequire\0", "config", "nordic.nvim")
 time([[Config for nordic.nvim]], false)
 
 _G._packer.inside_compile = false

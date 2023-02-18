@@ -12,6 +12,28 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use {
+        "max397574/better-escape.nvim",
+        config = function()
+            require("better_escape").setup()
+        end,
+    }
+    use {
+        'tummetott/reticle.nvim',
+        config = function()
+            require('reticle').setup {
+                -- add options here or leave empty
+            }
+        end
+    }
+    
+    --file tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
+    
+    use 'nvim-tree/nvim-web-devicons'
 
     -- git related plugins
     use 'lewis6991/gitsigns.nvim'
@@ -26,7 +48,6 @@ return require('packer').startup(function(use)
             { 'nvim-lua/plenary.nvim' },
         }
     }
-    use { "shortcuts/no-neck-pain.nvim", tag = "*" }
     use 'm4xshen/autoclose.nvim'
     use {
         'andersevenrud/nordic.nvim',
@@ -102,16 +123,15 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/playground'
     use 'theprimeagen/harpoon'
     use 'mbbill/undotree'
-    use 'numToStr/FTerm.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
     -- prettier netrw
     -- use { 'prichrd/netrw.nvim' }
     -- sourcegraph
-    --[[ use {
+    use {
         'tjdevries/sg.nvim',
-        build = "cargo build --workspace",
+        run = "rustup run stable cargo build --workspace",
         dependencies = { "nvim-lua/plenary.nvim" }
-    } ]]
+    }
 
     -- one dark theme
     -- use({
