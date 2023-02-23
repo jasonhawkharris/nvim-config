@@ -1,3 +1,6 @@
+local function cmd(command)
+    return table.concat({ '<Cmd>', command, '<CR>' })
+end
 -- Explore when not using nvim-tree.nvim
 -- vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
@@ -12,3 +15,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Copy to system clipboard
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("n", "<leader>c", cmd 'set colorcolumn=0')
+vim.keymap.set("n", "<leader>C", cmd 'set colorcolumn=90')
